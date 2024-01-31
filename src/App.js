@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./Header";
+import Square from "./Square";
+import ColorInput from "./ColorInput";
+import { useState } from "react";
+
 
 function App() {
+
+  const [color, setColor] = useState('');
+
+  // const changeColor = (newColor) => {
+
+  //   setColor(newColor);
+  //   const squareEle = document.querySelector(`.square`);
+  //   squareEle.style.backgroundColor = color;
+
+  // }
+
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Header></Header>
+
+      <div>
+
+        <Square
+          color={color}
+        ></Square>
+
+        <ColorInput
+          color={color}
+          setColor={setColor}
+          //changeColor={changeColor}
+        ></ColorInput>
+
+      </div>
+
     </div>
+
   );
 }
 
