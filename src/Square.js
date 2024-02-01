@@ -6,7 +6,10 @@ const Square = ({color}) => {
     <div 
       className='square' 
       style={{backgroundColor: color}}
-    ></div>
+    >
+      <h2 className='square__h2'>{color}</h2>
+
+    </div>
 
   )
 }
