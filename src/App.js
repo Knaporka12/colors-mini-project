@@ -7,6 +7,8 @@ import { useState } from "react";
 function App() {
 
   const [color, setColor] = useState('');
+  const [hexColor, setHexColor] = useState('');
+  const [isDarkText, setIsDarkText] = useState(true);
 
   // const changeColor = (newColor) => {
 
@@ -24,13 +26,18 @@ function App() {
 
       <div>
 
-        <Square
+        <Square 
           color={color}
+          hexColor={hexColor}
+          isDarkText={isDarkText}
         ></Square>
 
         <ColorInput
           color={color}
           setColor={setColor}
+          setHexColor={setHexColor}
+          isDarkText={isDarkText}
+          setIsDarkText={setIsDarkText}
           //changeColor={changeColor}
         ></ColorInput>
 

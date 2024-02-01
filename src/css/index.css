@@ -41,6 +41,7 @@ header {
   margin-bottom: 0.5rem;
   box-shadow: 0px 0px 3px black;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
 }
@@ -49,8 +50,17 @@ header {
   text-align: center;
 }
 
-.color-input {
+.change-section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
   width: 300px;
+}
+
+.color-input {
+  width: 100%;
   padding: 0.5rem 0.25rem;
   border: 2px solid lightslategray;
   border-radius: 10px;
@@ -60,4 +70,10 @@ header {
 
 .color-input:focus {
   background-color: #00cccc;
+}
+
+.change-btn {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.25rem 0.25rem;
 }/*# sourceMappingURL=index.css.map */
